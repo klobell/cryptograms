@@ -3,6 +3,7 @@
 
 # PyCharm project files
 .idea/
+*.iml
 
 # Jupyter notebook checkpoints
 .ipynb_checkpoints/
@@ -19,3 +20,4 @@ venv/
 # Output files (optional: if you don’t want them in GitHub)
 outputs/*.pages
 outputs/*.docx
+
