@@ -6,8 +6,8 @@ Motivated by the shortage of high-quality cryptograms and inconsistent difficult
 
 Performance is limited by dataset size; more data should improve results.
 
-## To run this notebook in Colab:
-1. Click below to open in Google Colab:  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/klobell/cryptograms/blob/main/cryptograms_github.ipynb)
+## To run in Colab:
+1. Open notebook in Google Colab:  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/klobell/cryptograms/blob/main/cryptograms_github.ipynb)
 
 2. Run:
 ```python
