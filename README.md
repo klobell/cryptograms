@@ -5,11 +5,13 @@ This project extracts features from text structure, word patterns, and cryptogra
 Motivated by the shortage of high-quality cryptograms and inconsistent difficulty ratings in existing sources.
 
 ## To run this notebook in Colab:
-1. Open a new Colab notebook.
+1. Click below to open in Google Colab:  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/klobell/cryptograms/blob/main/notebook.ipynb)
+
 2. Run:
-   - !git clone https://github.com/klobell/cryptograms.git
-   - %cd cryptograms
-3. Then open and run the notebook.
+```python
+!git clone https://github.com/klobell/cryptograms.git
+%cd cryptograms
+```
 
 ## Data sources
 Training data from [here](https://cryptograms.puzzlebaron.com/play.php)
