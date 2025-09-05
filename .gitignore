@@ -1,0 +1,21 @@
+# macOS system files
+.DS_Store
+
+# PyCharm project files
+.idea/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+venv/
+.env/
+
+# Output files (optional: if you don’t want them in GitHub)
+outputs/*.pages
+outputs/*.docx
