@@ -3,6 +3,8 @@ from collections import Counter
 import numpy as np
 import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.feature_extraction.text import CountVectorizer
+
 
 
 class CryptogramFeaturizer(BaseEstimator, TransformerMixin):
@@ -88,3 +90,25 @@ class CryptogramFeaturizer(BaseEstimator, TransformerMixin):
 
         return pd.DataFrame(features)
 
+
+class RepeatNgramCounter(BaseEstimator, TransformerMixin):
+    def __init__(self, ngram_ranges=[(1, 1), (2, 2), (3, 3)]):
+        self.ngram_ranges = ngram_ranges
+        self.vectorizers = [CountVectorizer(ngram_range=r) for r in ngram_ranges]
+
+    def fit(self, X, y=None):
+        X = [str(doc) for doc in X]  # ensure all inputs are strings
+        for vec in self.vectorizers:
+            vec.fit(X)
+        return self
+
+    def transform(self, X):
+        X = [str(doc) for doc in X]  # ensure all inputs are strings
+        features = []
+        for vec in self.vectorizers:
+            X_counts = vec.transform(X)
+            # Count repeated n-grams in each document
+            repeats = np.array((X_counts > 1).sum(axis=1)).flatten()
+            features.append(repeats)
+        # Return a dense 2D array of shape (n_docs, n_features)
+        return np.column_stack(features)
