@@ -4,8 +4,6 @@ Generate cryptograms from quotes and predict their difficulty using machine lear
 This project extracts features from text structure, word patterns, and cryptographic statistics to estimate difficulty.  
 Motivated by the shortage of high-quality cryptograms and inconsistent difficulty ratings in existing sources.
 
-Performance is limited by dataset size; more data should improve results.
-
 ## To run in Colab:
 1. Open notebook in Google Colab:  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/klobell/cryptograms/blob/main/cryptograms_github.ipynb)
 
